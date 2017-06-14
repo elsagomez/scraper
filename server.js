@@ -43,7 +43,7 @@ app.set("view engine", "handlebars");
 app.use(express.static("public"));
 
 if(process.env.NODE_ENV == 'production'){
-  mongoose.connect('mongodb://heroku_s23ms2fb:erq1g8uvbjo3hg7epe4lbcjbsr@ds125262.mlab.com:25262/heroku_s23ms2fb');
+  mongoose.connect('mongodb://heroku_07djq2tm:lim1p7d8subb43h9jfp7bt3slj@ds127842.mlab.com:27842/heroku_07djq2tm');
 }
 // For Local Environment
 else{
@@ -113,7 +113,7 @@ app.get("/scrape", function(req, res) {
     });
   });
   // Tell the browser that we finished scraping the text
-  res.send("Scrape Complete");
+
   res.redirect("/articles");
 });
 
